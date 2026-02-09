@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, ChevronDown, Code2, Briefcase, User, TrendingUp, Shield, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, ChevronDown, Code2, Briefcase, User, TrendingUp, Shield, Heart} from 'lucide-react';
 
 
 export default function Portfolio() {
@@ -9,12 +9,12 @@ export default function Portfolio() {
   const portfolioData = {
     name: "Archana Srinivas",
     title: "Software Developer | IT Support Specialist",
-    tagline: "Crafting elegant code and solving technical problems",
+    tagline: "Welcome to my website! Here you’ll find information about me, my interests, my experiences, my projects, and more.",
     email: "archanasrinivas482@gmail.com",
     github: "https://github.com/archana-srinivas",
     linkedin: "https://www.linkedin.com/in/archanas01",
     
-    about: "I'm an aspiring IT professional building expertise across cybersecurity, cloud infrastructure, and software development. With hands-on experience in enterprise-grade tools and platforms, I'm focused on delivering reliable technical solutions and proactive security monitoring.",
+    about: "I'm an aspiring IT professional building expertise across cybersecurity, and software development. With hands-on experience in enterprise-grade tools and platforms, I'm focused on delivering reliable technical solutions and proactive security monitoring.",
     
     skills: {
     "Ticketing/ITSM": ["ServiceNow", "Jira", "osTicket", "Spiceworks"],
@@ -23,12 +23,23 @@ export default function Portfolio() {
     "Cloud": ["AWS", "Azure", "Terraform", "Docker", "Kubernetes"],
     "Database": ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
     "Development": ["Git", "React", "Node.js", "Python", "Jenkins"],
-    "Networking": ["pfSense", "Cisco Packet Tracer", "Wireshark"],
+    "Networking": ["pfSense", "Cisco Packet Tracer"],
     "Scripting": ["PowerShell", "Python", "Bash"],
     "Testing": ["Selenium", "Cypress", "JMeter", "Postman"]  
     },
     
     projects: [
+      {
+        title: "Incident Management & Automation",
+        description: "An incident management solution focused on improving tracking, escalation, and resolution processes for electronic trading platforms. The project includes incident categorization and severity mapping in ServiceNow to enhance response times, along with data analysis using SQL and Excel to identify recurring platform, connectivity, and entitlement issues.",
+        tech: ["ServiceNow", "MySQL", "Microsoft Excel", "Power BI", "Python"],
+        github: "https://github.com/archana-srinivas/incident-management-automation",
+        highlights: ["Incident Tracking Automation", "Severity Mapping", "Data Analysis & Reporting"],
+        icon: Shield,
+        color: "bg-blue-500",
+        lightColor: "bg-blue-50",
+        borderColor: "border-blue-200"
+      },
       {
         title: "Real-Time Trade Reconciliation System",
         description: "A reconciliation engine that processes daily trade records, matching internal transactions against external clearing house data. Automatic matching of internal vs external trades, discrepancy detection with configurable tolerance levels, alert mechanisms for unmatched or mismatched trades, and audit trail in MongoDB.",
@@ -36,14 +47,14 @@ export default function Portfolio() {
         github: "https://github.com/archana-srinivas/Projects",
         highlights: ["Kafka Integration", "Real-time Processing", "MongoDB Audit Trail"],
         icon: TrendingUp,
-        color: "bg-blue-500",
-        lightColor: "bg-blue-50",
-        borderColor: "border-blue-200"
+        color: "bg-emerald-500",
+        lightColor: "bg-emerald-50",
+        borderColor: "border-emerald-200"
       },
       {
         title: "Threat Detection with UNSW-NB15",
         description: "In today's digital world, network security is a major concern. Cyber attacks are increasingly common and harder to detect. This project aims to classify network traffic as either normal or malicious (attack) based on network behavior using machine learning. Accurately predicting attacks can help reduce security breaches and system downtime.",
-        tech: ["Data cleaning & preprocessing", "Data visualization & storytelling", "Data Analysis"],
+        tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
         github: "https://github.com/w8162583/projects",
         highlights: ["ML Classification", "Network Traffic Analysis", "85% Accuracy"],
         icon: Shield,
@@ -54,7 +65,7 @@ export default function Portfolio() {
       {
         title: "Donor-Recipient Matching Dashboard",
         description: "A full-stack medical application designed to modernize the organ donation matching process. It serves as a technical bridge, connecting the ColdFusion (CFML) backend with the React.js frontend, supported by an SQL Server database. Key Feature: A 'Match Score' algorithm in the SQL procedure that ranks potential donors based on blood type and proximity.",
-        tech: ["REST API Design", "Database Architecture", "Frontend Engineering"],
+        tech: ["React.js", "ColdFusion (CFML)", "SQL Server", "REST APIs"],
         github: "https://github.com/archana-srinivas/Donor-Recipient-Matching-Dashboard-React-ColdFusion-SQL-Server",
         highlights: ["Full-Stack App", "Match Algorithm", "ColdFusion Backend"],
         icon: Heart,
@@ -390,7 +401,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center text-gray-500">
-          <p>© 2024 {portfolioData.name}. Built with React & Tailwind CSS.</p>
+          <p>© {new Date().getFullYear()} {portfolioData.name}. Built with React & Tailwind CSS.</p>
         </div>
       </footer>
     </div>
