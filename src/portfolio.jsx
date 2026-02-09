@@ -5,7 +5,6 @@ import { Github, Linkedin, Mail, ExternalLink, ChevronDown, Code2, Briefcase, Us
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('projects');
 
-  // REPLACE THESE WITH YOUR ACTUAL INFO
   const portfolioData = {
     name: "Archana Srinivas",
     title: "Software Developer | IT Support Specialist",
@@ -205,9 +204,6 @@ export default function Portfolio() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-[#0a0a0a]/80 backdrop-blur-lg z-50 border-b border-white/5">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="font-display text-2xl font-bold gradient-text">
-            {portfolioData.name.split(' ')[0]}
-          </div>
           <div className="flex gap-8 items-center">
             <button onClick={() => scrollToSection('projects')} className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}>Projects</button>
             <button onClick={() => scrollToSection('skills')} className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}>Skills</button>
